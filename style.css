@@ -1,1 +1,161 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap')
+
+*
+   box-sizing: border-box
+   margin: 0
+   padding: 0
+
+html
+   font-size: 6.9444444444vw
+
+   // color
+   --transparent: #ffffff00 !important
+   --white: #ffffff !important
+   --black: #0C0B0B !important
+
+body
+   max-width: 100vw
+   background: var(--white)
+   font-size: 14px
+   font-family: 'Poppins', sans-serif
+
+
+.interactive
+   display: flex
+   align-items: center
+   justify-content: center
+   min-height: max-content
+   height: 100vh
+   max-height: 100vh
+   font-size: 1.6rem
+   text-transform: uppercase
+   padding: 1rem 0.3rem
+
+.sphere
+   display: flex
+   align-items: center
+   gap: 0.24rem
+   height: 100vh
+   padding: 0.3rem
+   &-item
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      width: 5.7rem
+      max-width: 5.7rem
+      height: 5.7rem
+      font-size: 0.16rem
+      text-align: center
+      border: 1px solid var(--black)
+      border-radius: 50%
+      aspect-ratio: 1/1
+      padding: 0.9rem
+      clip-path: circle(50%)
+      &.hidden
+         width: 0.01rem
+         height: 0.01rem
+         padding: 0
+         opacity: 0
+         visibility: hidden
+      lottie-player
+         width: 5.7rem
+         max-width: 5.7rem
+         height: 5.7rem
+         border-radius: 50%
+      &__text
+         position: absolute
+         top: 50%
+         left: 50%
+         width: 100%
+         max-width: 3.75rem
+         height: auto
+         transform: translate(-50%, -50%)
+         b
+            font-weight: bold
+
+#sphere-real
+   position: absolute
+   top: 0
+   left: 0
+   width: 100%
+   height: 100%
+   canvas
+      clip-path: circle(50%)
+      overflow: hidden
+
+.sound-icon-wrap
+    position: fixed
+    bottom: 0.34rem
+    right: 0.34rem
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 0.48rem
+    height: 0.44rem
+    border: 1px solid var(--white)
+    border-radius: 0.3rem
+    z-index: 10
+    mix-blend-mode: difference
+    svg
+       width: 0.2rem
+       height: auto
+       .line
+          transition: 0.4s
+    &.is-active
+       svg .line
+          opacity: 0
+          visibility: hidden
+        
+.scroll
+  position: fixed
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 0.12rem
+  bottom: 0.34rem
+  left: 0.34rem
+  line-height: 1
+  padding: 0.14rem
+  border: 1px solid var(--black)
+  border-radius: 0.3rem
+  svg
+    width: 0.13rem
+    
+.logo
+  position: fixed
+  top: 0.34rem
+  left: 0.34rem
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 0.08rem
+  &-lottie
+    width: 0.9rem
+    #lottie-logo
+      width: 100%
+      height: auto
+  &-name
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    padding: 0.14rem 0.18rem
+    border: 1px solid var(--black)
+    border-radius: 0.3rem
+    
+.motion
+  position: fixed
+  top: 0.34rem
+  right: 0.34rem
+  display: flex
+  align-items: center
+  justify-content: center
+  color: var(--black)
+  text-decoration: none
+  padding: 0.14rem 0.18rem
+  border: 1px solid var(--black)
+  border-radius: 0.3rem
+  
